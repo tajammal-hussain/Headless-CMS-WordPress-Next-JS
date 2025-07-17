@@ -12,5 +12,6 @@ const WooCommerce  = new WooCommerceRestApi({
 export async function getProducts()
 {
     const products = await WooCommerce.get("products");
+    console.log(products);
     return products.data;
 }

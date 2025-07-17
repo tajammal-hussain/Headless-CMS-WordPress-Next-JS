@@ -13,7 +13,7 @@ export default async function Header()
            <div className="header-box flex justify-between items-center w-full max-w-full pl-30 pr-30">
             <div className="header-left flex-1 items-center h-[6.99vw] flex w-1/2">
                 <Link href="/">
-                    <Image src={logo.url} alt={logo.alt} className="w-[10.41vw] h-[3.49vw] object-contain" width={100} height={100} />
+                    <Image src={logo.url} alt={logo.alt} className="w-[8.41vw] h-[2.49vw] object-contain" width={100} height={100} />
                 </Link>
             </div> 
             <div className="header-right flex justify-between items-center w-1/2">

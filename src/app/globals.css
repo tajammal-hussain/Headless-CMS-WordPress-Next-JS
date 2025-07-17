@@ -120,3 +120,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.product-item:first-child .product-item-box,
+.product-item:nth-child(3n+1) .product-item-box {
+  @apply -mt-[70px] will-change-transform;
+}

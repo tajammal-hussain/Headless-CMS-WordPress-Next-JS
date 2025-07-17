@@ -13,7 +13,7 @@ export default function MiniCart() {
         <div className="mini-cart">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                    <button className="text-lg font-medium flex items-center">
+                    <button className="text-lg font-medium flex items-center ">
                         <ShoppingBag className="h-6 w-6" />
                         {cartItems.length > 0 && (
                             <span className="bg-primary text-white rounded-full px-2 py-1 text-xs">

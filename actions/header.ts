@@ -6,8 +6,6 @@ export async function getLogo(){
         const logoData = await logo.json();
         return logoData;
     } catch (error) {
-        console.log(error);
-        throw new Error("Failed to fetch logo");
         return [];
     }
 }
