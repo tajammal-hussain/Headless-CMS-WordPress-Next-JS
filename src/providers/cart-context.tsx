@@ -21,6 +21,7 @@ interface CartContextType {
     updateQuantity: (productId : string, quantity : number) => void
     clearCart: () => void
     setIsOpen: (isOpen : boolean) => void
+    isOpen: boolean
     cartTotal: number
 }
 
@@ -66,7 +67,7 @@ const CartProvider = ({children}: Props) => {
     },[items])
 
     return (
-        <CartContext.Provider value={{items, addItem, removeItem, updateQuantity,clearCart,setIsOpen,cartTotal}}>
+        <CartContext.Provider value={{items, addItem, removeItem, updateQuantity,clearCart,isOpen,setIsOpen,cartTotal}}>
             {children}
         </CartContext.Provider>
     )

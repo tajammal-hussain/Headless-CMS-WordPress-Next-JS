@@ -7,7 +7,6 @@ export default function ProductGrid({products}: Props)
 {
     return (
         <div>
-            
         </div>
     )
 }
