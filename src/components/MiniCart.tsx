@@ -45,15 +45,20 @@ export default function MiniCart() {
                                 <ul className="space-y-6">
                                     {
                                         cartItems.map((item) => (
-                                            <li key={item.id} className="flex gap-4">
-                                                <div className="flex items-start border-b-1 border-gray-200 ">
+                                            <li key={item.id} className="flex gap-4 border-b-1 border-gray-200 pb-[20px]">
+                                                <div className="flex items-start 
+                                                max-w-[40%]
+                                                basis-[40%]
+                                                ">
                                                     <div className="flex overflow-hidden rounded items-center justify-center w-[7.611vw] h-[7.611vw]">
                                                         <Image src={item.images[0].src || '/placeholder.svg'} alt={item.name} width={96} height={96} 
                                                         className="w-full h-full object-cover object-center"
                                                         />
                                                     </div>
                                                 </div>
-                                                <div className="h-[7.661vw] flex mr-0 text-[13px] lg:flex-row lg:justify-between lg:self-stretch">
+                                                <div className="h-[7.661vw] flex mr-0 text-[13px] lg:flex-row lg:justify-between lg:self-stretch max-w-[60%]
+                                                basis-[60%]
+                                                ">
                                                     <div className="flex flex-col lg:justify-between lg:flex-col lg:slef-stretch">
                                                         <div className="flex flex-col">
                                                             <p className="text-[1vw] leading-[1.31vw] font-medium text-gray-900">
@@ -61,21 +66,21 @@ export default function MiniCart() {
                                                             </p>
                                                         </div>
                                                         <div className="flex flex-col">
-                                                           <Link href="#" onClick={()=> removeItem(item.id)} className="text-[1vw] leading-[1.31vw] font-medium text-gray-900">
+                                                           <Link href="#" onClick={()=> removeItem(item.id)} className="text-[0.8vw] leading-[1.31vw] font-medium text-gray-900">
                                                                 Remove
                                                            </Link>
                                                         </div>
                                                     </div>
                                                     <div className="flex flex-col gap-[30px]">
-                                                        <div className="flex flex-col text-center">
-                                                           <button className="rounded-md border p-1" onClick={()=> updateQuantity(item.id, item.quantity - 1)}>
+                                                        <div className="flex flex-col text-center items-center">
+                                                           <button className="rounded-sm border p-1 w-[25px]" onClick={()=> updateQuantity(item.id, item.quantity - 1)}>
                                                                 <Minus className="h-4 w-4" />
                                                                
                                                            </button>
-                                                           <span className="text-[1vw] leading-[1.31vw] font-medium text-gray-900">
+                                                           <span className="text-[0.8vw] leading-[1.31vw] font-medium text-gray-900">
                                                                     {item.quantity}
                                                             </span>
-                                                            <button className="rounded-md border p-1" onClick={()=> updateQuantity(item.id, item.quantity + 1)}>
+                                                            <button className="rounded-sm border p-1 w-[25px]" onClick={()=> updateQuantity(item.id, item.quantity + 1)}>
                                                                 <Plus className="h-4 w-4" />
                                                             </button>
                                                         </div>
