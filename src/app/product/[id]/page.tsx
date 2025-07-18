@@ -1,11 +1,18 @@
-import React from "react";
+import { getProductById } from "../../../../actions/products";
+import ProductDetails from "../ProductDetails";
 
-const ProductPage = () => {
-    return (
-        <div>
-            <h1>Product Page</h1>
-        </div>
-    )
+
+interface ProductPageProps {
+  params: {
+    id: string;
+  };
 }
 
-export default ProductPage;
+export default async function ProductPage({ params }: ProductPageProps) {
+    const product = await getProductById(params.id);
+  return (
+    <>
+      <ProductDetails product={product} />
+    </>
+  );
+}

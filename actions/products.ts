@@ -14,3 +14,16 @@ export async function getProducts()
     const products = await WooCommerce.get("products");
     return products.data;
 }
+
+export async function getProductById(slug: string) {
+    try {
+        const product = await WooCommerce.get("products",{
+            slug, 
+            per_page: 1,
+        });
+        return product.data[0];
+    } catch (error) {
+        console.error('Error fetching product:', error);
+        return null;
+    }
+}

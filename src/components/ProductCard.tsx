@@ -19,7 +19,7 @@ const ProductCard = ({product}:Props)=>{
         <div className="relative product-item group">
             <div className="block product-item-box">
                 <div className="relative overflow-hidden flex justify-center items-center max-w-full rounded-[4.028vw]">
-                    <Link href={`/product/${product.id}`} className="block">
+                    <Link href={`/product/${product.slug}`} className="block">
                         <Image
                         src={product.images[0].src || '/placeholder.svg'}
                         alt={product.name}
@@ -30,7 +30,6 @@ const ProductCard = ({product}:Props)=>{
                     </Link>
                     <div className="absolute bottom-[1.008vw] left-1/2 -translate-x-1/2 w-full px-[1.008vw]">
                        <AddToCart product={product} addItem={addItem} />
-                       
                     </div>
                 </div>
                 <Link href={`/product/${product.id}`} className="block mt-[1.389vw]">

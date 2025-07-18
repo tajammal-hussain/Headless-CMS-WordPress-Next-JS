@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CartProvider from "@/providers/cart-context";
+import Header from "@/components/Header";
 
 const interSans = Inter({
   weight: ["400", "500", "600", "700"],
@@ -24,6 +25,7 @@ export default function RootLayout({
         className={`${interSans.className} antialiased`}
       >
         <CartProvider>
+          <Header />
           {children}
         </CartProvider>
       </body>
